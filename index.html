@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+<meta charset="UTF-8">
+<title>Juego Javascript </title>
+<script>
+// Juego adivina el nuemo JS
+var min = 1;
+var max= 100;
+var oportunidades= 0;
+var numero;
+var aleatorio = Math.floor(Math.random() * max - min + 1) + min;
+for(oportunidades; oportunidades  < 10; oportunidades++){
+numero = parseInt(prompt(' ingresa un número que esté entre'+min+' y ' +max )); 
+var numeroveces = oportunidades + 1;
+if(numero >= min && numero <= max){
+if(numero < aleatorio){
+    alert('El numero ingresado es más bajo, oportunidad numero '+numeroveces);
+}else if (numero > aleatorio){
+    alert('El numero ingresado es más alto, oportunidad numero '+numeroveces);
+} else if (numero == aleatorio){
+    break;
+}
+} else{
+    alert('Debe ingresar un numero entre '+min+' y'  + max );
+} 
+
+}
+if(numero == aleatorio){
+    alert('Felicitaciones adivinaste el número en '+oportunidades+' oportunidades.');
+}else{
+    alert('Has agotado los 10 intentos y has perdido.  '+aleatorio+' era el número.');
+}
+
+</script>
+</head>
+<body>
+    
+</body>
+
+
+</html>
